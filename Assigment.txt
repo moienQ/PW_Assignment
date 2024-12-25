@@ -1,0 +1,164 @@
+Assignment
+
+
+1. What are Primitive Data types in Java?
+Answrer:
+In Java, primitive data types are the basic building 
+blocks for data manipulation. They are predefined by 
+the language and serve as the most fundamental data types. 
+Here are the 8 primitive types:
+
+byte:
+Size: 1 byte (8 bits)
+Range: -128 to 127
+
+short:
+Size: 2 bytes (16 bits)
+Range: -32,768 to 32,767
+
+int:
+Size: 4 bytes (32 bits)
+Range: -2,147,483,648 to 2,147,483,647
+
+long:
+Size: 8 bytes (64 bits)
+Range: -26³ to 26³-1
+
+float:
+Size: 4 bytes (32 bits)
+Precision: ~6-7 decimal digits
+
+double:
+Size: 8 bytes (64 bits)
+Precision: ~15 decimal digits
+
+char:
+Size: 2 bytes (16 bits)
+Represents: A single 16-bit Unicode character
+
+boolean:
+Size: 1 bit (JVM dependent)
+Values: true or false
+
+
+
+2.What are Identifiers in Java?
+Answer:
+Identifiers are names used to identify variables, 
+methods, classes, or other elements in a program. 
+They must follow these rules:
+
+Must begin with a letter, _, or $.
+Cannot be a keyword or contain spaces.
+Case-sensitive.
+Example: int age; (age is an identifier).
+
+
+
+
+3. What is a final Class in Java?
+Answer:
+A final class cannot be subclassed. 
+This ensures the class's behavior cannot be altered 
+through inheritance.
+
+Example: public final class Constants { ... }.
+
+
+
+
+4. What are the Two Ways to Make a Class Final?
+answer:
+Use the final keyword before the class definition.
+java
+Copy code
+public final class FinalClass { ... }
+Define all methods and fields as final to prevent 
+modification, although the class itself isn't declared final.
+
+
+
+5. Can We Create an Instance of a Final Class in Another Class?
+Answer:
+Yes, you can create an instance of a final class in 
+another class, just like any other class.
+
+java
+Copy code
+public final class FinalClass { ... }
+public class Test {
+    FinalClass obj = new FinalClass();
+}
+
+
+
+
+6. What is the volatile Keyword Used for?
+Answer:
+The volatile keyword ensures visibility of changes to a 
+variable across threads. It prevents the caching of variables by threads and forces them to read/write from main memory.
+
+Example:
+java
+Copy code
+private volatile int counter;
+
+
+7. What is the Use of the transient Keyword?
+Answer:
+
+The transient keyword prevents a field from being serialized. 
+It is ignored when an object is serialized, meaning its value will not be saved in the serialized form.
+
+Example:
+java
+Copy code
+private transient String password;
+
+
+
+8. What are the Types of Casting?
+Answer:
+
+
+Primitive Casting:
+Widening (Implicit): Smaller to larger type (e.g., int to float).
+Narrowing (Explicit): Larger to smaller type (e.g., double to int).
+
+
+Reference Casting:
+Upcasting: Subclass to superclass (implicit).
+Downcasting: Superclass to subclass (explicit).
+
+
+
+
+9. What is Boxing and Unboxing?
+Answer:
+Boxing: Converting a primitive type to its wrapper 
+object.
+
+Example:
+java
+Copy code
+int num = 10;
+Integer obj = num; // Auto-boxing
+Unboxing: Converting a wrapper object back to its 
+primitive type.
+
+Example:
+java
+Copy code
+Integer obj = 20;
+int num = obj; // Auto-unboxing
+
+
+
+
+
+10. What is the Difference Between Keywords, Identifiers, and Literals in Java?
+Answer:
+Aspect	                   Keywords	              Identifiers	               Literals
+Definition	    Reserved words in Java.	 User-defined names.	          Fixed values in the code.
+Examples	     if, class, return.	         myVariable, TestClass.	          123, "Hello", true.
+Usage	           Language constructs.	         Variables, methods, etc.	  Represent constant values.
